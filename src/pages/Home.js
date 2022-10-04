@@ -5,6 +5,7 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 import New from '../components/New';
+import House from '../components/House';
 
 export default function Home() {
     const navigation = useNavigation();
@@ -49,6 +50,32 @@ export default function Home() {
                 onPress={() => {}}
                 />
             </ScrollView>
+
+            <View style={{ flexDirection: 'row', marginBottom: 10, alignItems: 'center' }}>
+                <Text style={[ styles.title,  { marginTop: 20 } ]}> Próximo de você </Text>
+            </View>
+
+            <ScrollView horizontal showsHorizontalScrollIndicator={ false } style={{ paddingHorizontal: 15 }}>
+                <House
+                cover={require('../../assets/house4.jpg')}
+                description='DESCRIÇÃO QUAQUER COISA AQUI!'
+                price='970,89'
+                />
+                <House
+                cover={require('../../assets/house5.jpg')}
+                description='DESCRIÇÃO QUAQUER COISA AQUI!'
+                price='770,89'
+                />
+                <House
+                cover={require('../../assets/house6.jpg')}
+                description='DESCRIÇÃO QUAQUER COISA AQUI!'
+                price='1070,89'
+                />
+            </ScrollView>
+
+            <Text style={[ styles.title,  { marginTop: 20 } ]}> 
+                Dica do dia
+            </Text>
 
         </ScrollView>
     );

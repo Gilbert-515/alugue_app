@@ -5,7 +5,7 @@ import AppLoading from 'expo-app-loading';
 import Routes from './src/router';
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Montserrat_400Regular, 
     Montserrat_500Medium, 
     Montserrat_700Bold
